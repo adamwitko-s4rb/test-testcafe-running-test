@@ -1,0 +1,22 @@
+{
+  "name": "test-testcafe-running-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome *.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adamwitko/test-testcafe-running-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adamwitko/test-testcafe-running-test/issues"
+  },
+  "homepage": "https://github.com/adamwitko/test-testcafe-running-test#readme",
+  "devDependencies": {
+    "testcafe": "^0.20.3"
+  }
+}

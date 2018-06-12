@@ -1,0 +1,27 @@
+dist: trusty
+language: node_js
+
+node_js:
+  - "9.11.1"
+
+before_install:
+  - npm i -g npm@5.6.0
+
+jobs:
+  include:
+    stage: test
+    addons:
+      firefox: latest
+      apt:
+        sources:
+          - google-chrome
+        packages:
+          - google-chrome-stable fluxbox
+    before_script:
+      - "export DISPLAY=:99.0"
+      - "sh -e /etc/init.d/xvfb start"
+      - sleep 3
+      - fluxbox >/dev/null 2>&1 &
+    env:
+      - INSTANCES=freds
+    script: npm test
