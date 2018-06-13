@@ -15,4 +15,4 @@ jobs:
       - docker
     before_install:
       - docker pull testcafe/testcafe
-    script: docker run -v ${TRAVIS_BUILD_DIR}/tests:/tests -it testcafe/testcafe firefox tests/**/*.ts
+    script: docker run -v ${TRAVIS_BUILD_DIR}/tests:/tests -it testcafe/testcafe 'chromium --no-sandbox' tests/**/*.ts
