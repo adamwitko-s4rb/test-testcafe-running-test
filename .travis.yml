@@ -15,4 +15,4 @@ jobs:
       - docker
     before_install:
       - docker pull testcafe/testcafe
-    script: docker run -v tests:/tests -it testcafe/testcafe chrome tests
+    script: docker run -v tests:/tests -it testcafe/testcafe chrome tests/**/*.ts
