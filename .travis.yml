@@ -15,7 +15,6 @@ jobs:
       - docker
     before_install:
       - docker pull testcafe/testcafe
-      - docker run testcafe/testcafe
     env:
       - INSTANCES=freds
     script: docker run -v -it testcafe/testcafe chrome *.ts
